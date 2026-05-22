@@ -1,0 +1,10 @@
+# Pyrefly configuration for Edoc HMS Backend
+site-package-path = [
+    "../venv/Lib/site-packages"
+]
+
+python-interpreter-path = "../venv/Scripts/python.exe"
+
+search-path = [
+    "apps"
+]
