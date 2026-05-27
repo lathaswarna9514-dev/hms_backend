@@ -23,10 +23,25 @@ class SupportTicketViewSet(viewsets.ModelViewSet):
         
         # Super admin has unrestricted audit visibility
         if user.usertype == 'super-admin' or getattr(user, 'is_super_admin', False) or getattr(user, 'is_staff', False):
-            return SupportTicket.objects.all().order_by('-created_at')
-            
-        # Hospital staff/patients see their own raised support tickets
-        return SupportTicket.objects.filter(email=user.email).order_by('-created_at')
+            qs = SupportTicket.objects.all().order_by('-created_at')
+        else:
+            # Hospital staff/patients see their own raised support tickets
+            qs = SupportTicket.objects.filter(email=user.email).order_by('-created_at')
+
+        # Add filtering & search
+        status_param = self.request.query_params.get('status')
+        if status_param:
+            qs = qs.filter(status=status_param)
+
+        search_param = self.request.query_params.get('search')
+        if search_param:
+            from django.db.models import Q
+            qs = qs.filter(
+                Q(subject__icontains=search_param) |
+                Q(email__icontains=search_param) |
+                Q(name__icontains=search_param)
+            )
+        return qs
 
     def perform_create(self, serializer):
         user = self.request.user
@@ -73,3 +88,27 @@ class SupportTicketViewSet(viewsets.ModelViewSet):
                 )
             except Exception:
                 pass
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        
+        # Calculate global counts for the filtered base queryset (before pagination)
+        pending_count = queryset.exclude(status='resolved').count()
+        resolved_count = queryset.filter(status='resolved').count()
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            response = self.get_paginated_response(serializer.data)
+            response.data['pending_count'] = pending_count
+            response.data['resolved_count'] = resolved_count
+            return response
+
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({
+            'success': True,
+            'count': queryset.count(),
+            'pending_count': pending_count,
+            'resolved_count': resolved_count,
+            'results': serializer.data
+        })

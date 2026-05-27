@@ -305,7 +305,24 @@ class SuperAdminStaffViewSet(viewsets.ModelViewSet):
     """
     serializer_class = SuperAdminStaffSerializer
     permission_classes = [IsAuthenticated, IsSuperAdmin]
-    queryset = WebUser.objects.exclude(usertype__in=['super-admin', 'patient']).order_by('-date_joined')
+    
+    def get_queryset(self):
+        qs = WebUser.objects.exclude(usertype__in=['super-admin', 'patient']).order_by('-date_joined')
+        usertype_param = self.request.query_params.get('usertype')
+        if usertype_param:
+            legacy_map = {
+                'sa': 'super-admin',
+                'a': 'hospital-admin',
+                'd': 'doctor',
+                'p': 'patient',
+                'n': 'nurse',
+                'r': 'frontdesk',
+                'l': 'lab',
+                'ph': 'pharmacy'
+            }
+            mapped_type = legacy_map.get(usertype_param, usertype_param)
+            qs = qs.filter(usertype=mapped_type)
+        return qs
 
 
 class SuperAdminEmailView(APIView):

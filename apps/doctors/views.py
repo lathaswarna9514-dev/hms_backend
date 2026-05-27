@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from utils.permissions import IsAdminUser
+from utils.pagination import paginate_queryset_response
 from .models import Doctor, Specialty
 from .serializers import (
     DoctorListSerializer, DoctorDetailSerializer,
@@ -53,12 +54,7 @@ class DoctorListView(APIView):
             doctors = doctors.filter(
                 Q(name__icontains=search) | Q(email__icontains=search)
             )
-        serializer = DoctorListSerializer(doctors, many=True)
-        return Response({
-            'success': True,
-            'count': doctors.count(),
-            'data': serializer.data
-        })
+        return paginate_queryset_response(doctors, request, DoctorListSerializer)
 
     def post(self, request):
         serializer = DoctorCreateSerializer(data=request.data)

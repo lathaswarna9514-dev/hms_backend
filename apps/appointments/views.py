@@ -15,6 +15,7 @@ from .serializers import (
     AppointmentPatientSerializer
 )
 from .services import AppointmentService
+from utils.pagination import paginate_queryset_response
 
 
 class AppointmentListView(APIView):
@@ -62,8 +63,7 @@ class AppointmentListView(APIView):
         if department_type:
             qs = qs.filter(department_type=department_type.upper())
 
-        serializer = AppointmentListSerializer(qs, many=True)
-        return Response({'success': True, 'count': qs.count(), 'data': serializer.data})
+        return paginate_queryset_response(qs, request, AppointmentListSerializer)
 
 
 class AppointmentDetailView(APIView):
@@ -150,8 +150,7 @@ class MyAppointmentsView(APIView):
             'schedule', 'schedule__doctor', 'schedule__doctor__specialty'
         ).order_by('-schedule__schedule_date')
 
-        serializer = AppointmentPatientSerializer(qs, many=True)
-        return Response({'success': True, 'count': qs.count(), 'data': serializer.data})
+        return paginate_queryset_response(qs, request, AppointmentPatientSerializer)
 
 
 class DoctorAppointmentsView(APIView):
@@ -173,8 +172,7 @@ class DoctorAppointmentsView(APIView):
             schedule__doctor=doctor
         ).select_related('patient', 'schedule').order_by('-schedule__schedule_date')
 
-        serializer = AppointmentListSerializer(qs, many=True)
-        return Response({'success': True, 'data': serializer.data})
+        return paginate_queryset_response(qs, request, AppointmentListSerializer)
 
 
 class FrontDeskBookView(APIView):

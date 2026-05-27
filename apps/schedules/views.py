@@ -14,6 +14,7 @@ from .serializers import (
     ScheduleListSerializer, ScheduleDetailSerializer,
     ScheduleCreateSerializer, ScheduleBookingInfoSerializer
 )
+from utils.pagination import paginate_queryset_response
 
 
 class ScheduleListView(APIView):
@@ -62,8 +63,7 @@ class ScheduleListView(APIView):
         if upcoming:
             qs = qs.filter(schedule_date__gte=timezone.now().date())
 
-        serializer = ScheduleListSerializer(qs, many=True)
-        return Response({'success': True, 'count': qs.count(), 'data': serializer.data})
+        return paginate_queryset_response(qs, request, ScheduleListSerializer)
 
     def post(self, request):
         data = request.data.copy()
@@ -180,8 +180,7 @@ class MySchedulesView(APIView):
             schedule_date__gte=timezone.now().date()
         ).order_by('schedule_date', 'schedule_time')
 
-        serializer = ScheduleListSerializer(qs, many=True)
-        return Response({'success': True, 'data': serializer.data})
+        return paginate_queryset_response(qs, request, ScheduleListSerializer)
 
 
 from rest_framework import viewsets

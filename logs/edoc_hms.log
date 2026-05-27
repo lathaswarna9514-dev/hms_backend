@@ -7142,3 +7142,503 @@ DEBUG 2026-05-22 08:02:09,145 auth_middleware 4668 14072 API Request: GET /api/s
 DEBUG 2026-05-22 08:02:16,643 auth_middleware 4668 14072 API Request: GET /api/schedules/5/ | User: anonymous
 DEBUG 2026-05-22 08:02:18,379 auth_middleware 4668 14072 API Request: POST /api/appointments/book/ | User: anonymous
 DEBUG 2026-05-22 08:02:22,626 auth_middleware 4668 14072 API Request: GET /api/appointments/my/ | User: anonymous
+DEBUG 2026-05-22 14:12:44,882 auth_middleware 18708 9668 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:15:21,245 auth_middleware 18708 37712 API Request: GET /api/dashboard/admin/ | User: anonymous
+DEBUG 2026-05-22 14:16:46,598 auth_middleware 18708 36096 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:16:46,600 auth_middleware 18708 28844 API Request: GET /api/pharmacy/orders/ | User: anonymous
+WARNING 2026-05-22 14:16:46,645 exception_handler 18708 28844 API Error 401: Given token not valid for any token type | View: <pharmacy.views.DispenseOrderViewSet object at 0x0000026EEEBE5EB0>
+WARNING 2026-05-22 14:16:46,646 exception_handler 18708 36096 API Error 401: Given token not valid for any token type | View: <pharmacy.views.MedicineViewSet object at 0x0000026EEEBE7620>
+DEBUG 2026-05-22 14:16:46,662 auth_middleware 18708 28844 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-22 14:16:46,664 auth_middleware 18708 36096 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-22 14:16:46,786 auth_middleware 18708 28844 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:16:46,787 auth_middleware 18708 36096 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:18:27,307 auth_middleware 18708 27684 API Request: GET /api/schedules/my/ | User: anonymous
+WARNING 2026-05-22 14:18:27,320 exception_handler 18708 27684 API Error 401: Given token not valid for any token type | View: <schedules.views.MySchedulesView object at 0x0000026EEEAAA6C0>
+DEBUG 2026-05-22 14:18:27,344 auth_middleware 18708 27684 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-22 14:18:27,399 auth_middleware 18708 27684 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:19:15,067 auth_middleware 18708 14144 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+WARNING 2026-05-22 14:19:15,069 exception_handler 18708 14144 API Error 401: Given token not valid for any token type | View: <dashboard.views.SuperAdminDashboardView object at 0x0000026EEEADDC10>
+DEBUG 2026-05-22 14:19:15,098 auth_middleware 18708 14144 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-22 14:19:15,152 auth_middleware 18708 14144 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:28:37,695 auth_middleware 18708 20216 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:29:07,675 auth_middleware 18708 31552 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:29:07,677 auth_middleware 18708 5636 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:31:55,712 auth_middleware 18708 19840 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-22 14:32:02,729 auth_middleware 18708 19840 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:32:02,734 auth_middleware 18708 36768 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:36:37,518 auth_middleware 18708 13076 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-22 14:36:43,772 auth_middleware 18708 13076 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:36:43,773 auth_middleware 18708 468 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:36:43,779 auth_middleware 18708 12792 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,828 auth_middleware 18708 32488 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,838 auth_middleware 18708 35120 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,843 auth_middleware 18708 4936 API Request: GET /api/dashboard/admin/ | User: anonymous
+WARNING 2026-05-22 14:57:43,889 exception_handler 18708 4936 API Error 401: Given token not valid for any token type | View: <dashboard.views.AdminDashboardView object at 0x0000026EEEBF85F0>
+DEBUG 2026-05-22 14:57:43,924 auth_middleware 18708 30404 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,925 auth_middleware 18708 10764 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,944 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,980 auth_middleware 18708 20068 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:43,993 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,040 auth_middleware 18708 4660 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,095 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,112 auth_middleware 18708 17480 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,149 auth_middleware 18708 32988 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,199 auth_middleware 18708 26940 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,247 auth_middleware 18708 17604 API Request: GET /api/dashboard/admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,233 auth_middleware 18708 4936 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-22 14:57:44,269 exception_handler 18708 17604 API Error 401: Given token not valid for any token type | View: <dashboard.views.AdminDashboardView object at 0x0000026EEED3D160>
+DEBUG 2026-05-22 14:57:44,458 auth_middleware 18708 17604 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-22 14:57:44,482 exception_handler 18708 17604 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000026EEEDA8EF0>
+DEBUG 2026-05-22 14:57:44,834 auth_middleware 18708 35120 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:44,836 auth_middleware 18708 32488 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,089 auth_middleware 18708 20068 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,090 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,090 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,091 auth_middleware 18708 17480 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,093 auth_middleware 18708 30404 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,095 auth_middleware 18708 4660 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,131 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,175 auth_middleware 18708 17604 API Request: GET /api/dashboard/admin/ | User: anonymous
+WARNING 2026-05-22 14:57:45,261 exception_handler 18708 17604 API Error 401: Authentication credentials were not provided. | View: <dashboard.views.AdminDashboardView object at 0x0000026EEEDAA300>
+DEBUG 2026-05-22 14:57:45,974 auth_middleware 18708 32488 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:45,980 auth_middleware 18708 35120 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,047 auth_middleware 18708 10764 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,133 auth_middleware 18708 26940 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,135 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,137 auth_middleware 18708 32988 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,143 auth_middleware 18708 17480 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,145 auth_middleware 18708 30404 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,147 auth_middleware 18708 4660 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,149 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,151 auth_middleware 18708 20068 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,152 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,866 auth_middleware 18708 32488 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,868 auth_middleware 18708 35120 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,970 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,973 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,975 auth_middleware 18708 4660 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,977 auth_middleware 18708 32988 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,977 auth_middleware 18708 20068 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,979 auth_middleware 18708 17480 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,979 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,981 auth_middleware 18708 26940 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:46,984 auth_middleware 18708 30404 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,238 auth_middleware 18708 10764 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,794 auth_middleware 18708 35120 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,796 auth_middleware 18708 32488 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,873 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,908 auth_middleware 18708 4660 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,910 auth_middleware 18708 17480 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,933 auth_middleware 18708 30404 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,935 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,936 auth_middleware 18708 26940 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,938 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,941 auth_middleware 18708 20068 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:47,942 auth_middleware 18708 32988 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,642 auth_middleware 18708 32488 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,648 auth_middleware 18708 35120 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,700 auth_middleware 18708 32988 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,701 auth_middleware 18708 26940 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,708 auth_middleware 18708 17480 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,709 auth_middleware 18708 4660 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,762 auth_middleware 18708 20068 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,764 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,765 auth_middleware 18708 30404 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,767 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:48,779 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,375 auth_middleware 18708 35120 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,429 auth_middleware 18708 32488 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,835 auth_middleware 18708 10764 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,981 auth_middleware 18708 32488 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,984 auth_middleware 18708 26940 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,985 auth_middleware 18708 35120 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,987 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,988 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,990 auth_middleware 18708 20068 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,992 auth_middleware 18708 32988 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,994 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,996 auth_middleware 18708 17480 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:49,998 auth_middleware 18708 30404 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:50,004 auth_middleware 18708 4660 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:50,803 auth_middleware 18708 10764 API Request: GET /api/schedules/my/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,141 auth_middleware 18708 35120 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,159 auth_middleware 18708 32488 API Request: GET /api/lab/requests/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,312 auth_middleware 18708 4660 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,320 auth_middleware 18708 17480 API Request: GET /api/pharmacy/orders/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,322 auth_middleware 18708 32988 API Request: GET /api/ipd/admissions/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,326 auth_middleware 18708 26940 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,372 auth_middleware 18708 20068 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,374 auth_middleware 18708 30404 API Request: GET /api/schedules/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,376 auth_middleware 18708 34492 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,396 auth_middleware 18708 39024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-22 14:57:51,404 auth_middleware 18708 39712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:17:09,990 auth_middleware 27684 15340 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+WARNING 2026-05-24 07:17:10,535 exception_handler 27684 15340 API Error 401: Given token not valid for any token type | View: <dashboard.views.SuperAdminDashboardView object at 0x00000216EE3C22A0>
+DEBUG 2026-05-24 07:17:20,281 auth_middleware 27684 25360 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:17:20,292 exception_handler 27684 25360 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE399C40>
+DEBUG 2026-05-24 07:17:43,933 auth_middleware 27684 35600 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:18:24,641 auth_middleware 27684 22744 API Request: GET /api/lab/tests/ | User: anonymous
+DEBUG 2026-05-24 07:18:24,772 auth_middleware 27684 27892 API Request: GET /api/lab/requests/ | User: anonymous
+WARNING 2026-05-24 07:18:24,943 exception_handler 27684 22744 API Error 401: Given token not valid for any token type | View: <lab.views.LabTestViewSet object at 0x00000216EE4E6810>
+WARNING 2026-05-24 07:18:24,961 exception_handler 27684 27892 API Error 401: Given token not valid for any token type | View: <lab.views.LabRequestViewSet object at 0x00000216EE4E5D90>
+DEBUG 2026-05-24 07:18:25,031 auth_middleware 27684 22744 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:18:25,053 auth_middleware 27684 27892 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:18:25,066 exception_handler 27684 22744 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE4E5700>
+WARNING 2026-05-24 07:18:25,089 exception_handler 27684 27892 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE4E7E00>
+DEBUG 2026-05-24 07:23:47,986 auth_middleware 27684 12392 API Request: GET /api/appointments/ | User: anonymous
+DEBUG 2026-05-24 07:23:47,988 auth_middleware 27684 29288 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-24 07:23:47,996 auth_middleware 27684 18492 API Request: GET /api/schedules/ | User: anonymous
+WARNING 2026-05-24 07:23:48,016 exception_handler 27684 29288 API Error 401: Given token not valid for any token type | View: <patients.views.PatientListView object at 0x00000216EE39AF60>
+WARNING 2026-05-24 07:23:48,019 exception_handler 27684 18492 API Error 401: Given token not valid for any token type | View: <schedules.views.ScheduleListView object at 0x00000216EE39BEC0>
+WARNING 2026-05-24 07:23:48,025 exception_handler 27684 12392 API Error 401: Given token not valid for any token type | View: <appointments.views.AppointmentListView object at 0x00000216EE3980B0>
+DEBUG 2026-05-24 07:23:48,039 auth_middleware 27684 29288 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:23:48,045 exception_handler 27684 29288 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE319100>
+DEBUG 2026-05-24 07:23:48,081 auth_middleware 27684 29288 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:23:48,083 auth_middleware 27684 12392 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:23:48,088 exception_handler 27684 29288 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE3198E0>
+WARNING 2026-05-24 07:23:48,092 exception_handler 27684 12392 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE31BEC0>
+DEBUG 2026-05-24 07:24:05,351 auth_middleware 27684 14880 API Request: GET /api/pharmacy/medicines/ | User: anonymous
+DEBUG 2026-05-24 07:24:05,356 auth_middleware 27684 19568 API Request: GET /api/pharmacy/orders/ | User: anonymous
+WARNING 2026-05-24 07:24:05,365 exception_handler 27684 14880 API Error 401: Given token not valid for any token type | View: <pharmacy.views.MedicineViewSet object at 0x00000216EE4E6B10>
+WARNING 2026-05-24 07:24:05,373 exception_handler 27684 19568 API Error 401: Given token not valid for any token type | View: <pharmacy.views.DispenseOrderViewSet object at 0x00000216EE4E7E00>
+DEBUG 2026-05-24 07:24:05,380 auth_middleware 27684 14880 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:24:05,383 exception_handler 27684 14880 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE4E4740>
+DEBUG 2026-05-24 07:24:05,386 auth_middleware 27684 19568 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:24:05,391 exception_handler 27684 19568 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE4E7350>
+DEBUG 2026-05-24 07:24:34,305 auth_middleware 27684 4732 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:24:53,717 auth_middleware 27684 26640 API Request: GET /api/schedules/my/ | User: anonymous
+WARNING 2026-05-24 07:24:53,739 exception_handler 27684 26640 API Error 401: Given token not valid for any token type | View: <schedules.views.MySchedulesView object at 0x00000216EE4E5910>
+DEBUG 2026-05-24 07:24:53,811 auth_middleware 27684 26640 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:24:53,819 exception_handler 27684 26640 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE4E5E20>
+DEBUG 2026-05-24 07:25:16,992 auth_middleware 27684 24112 API Request: GET /api/beds/ | User: anonymous
+DEBUG 2026-05-24 07:25:16,993 auth_middleware 27684 38248 API Request: GET /api/ipd/admissions/ | User: anonymous
+WARNING 2026-05-24 07:25:17,008 exception_handler 27684 38248 API Error 401: Given token not valid for any token type | View: <ipd.views.IPDAdmissionViewSet object at 0x00000216EE4E7A10>
+WARNING 2026-05-24 07:25:17,019 exception_handler 27684 24112 API Error 401: Given token not valid for any token type | View: <rooms_beds.views.BedViewSet object at 0x00000216EE4E4DA0>
+DEBUG 2026-05-24 07:25:17,035 auth_middleware 27684 38248 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:25:17,041 auth_middleware 27684 24112 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:25:17,051 exception_handler 27684 38248 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE4E40E0>
+WARNING 2026-05-24 07:25:17,059 exception_handler 27684 24112 API Error 401: Token is expired | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000216EE399B80>
+DEBUG 2026-05-24 07:30:48,321 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:30:48,493 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+INFO 2026-05-24 07:31:10,513 services 28820 19004 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 07:31:10,514 services 28820 19004 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 07:31:11,735 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:31:11,872 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:31:17,450 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:31:17,609 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:31:26,831 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:31:27,148 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:32:09,604 auth_middleware 14460 12388 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:32:12,603 auth_middleware 14460 12388 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 07:32:13,795 services 14460 12388 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 07:32:13,799 auth_middleware 14460 12388 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 07:32:13,850 auth_middleware 14460 12388 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:32:13,860 auth_middleware 14460 12388 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:32:13,866 exception_handler 14460 12388 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000002011F3F6360>
+DEBUG 2026-05-24 07:32:15,974 auth_middleware 14460 12388 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:32:17,065 auth_middleware 14460 12388 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:32:17,077 auth_middleware 14460 12388 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:32:17,081 exception_handler 14460 12388 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000002011F424410>
+DEBUG 2026-05-24 07:32:18,951 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:32:19,041 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:32:25,958 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:32:26,093 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:32:31,877 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:32:32,046 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:32:57,811 auth_middleware 8348 10668 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:33:02,462 auth_middleware 8348 10668 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 07:33:03,661 services 8348 10668 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 07:33:03,664 auth_middleware 8348 10668 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 07:33:03,718 auth_middleware 8348 10668 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:33:03,731 auth_middleware 8348 10668 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:33:03,736 exception_handler 8348 10668 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000002D8B3F55C70>
+DEBUG 2026-05-24 07:33:05,809 auth_middleware 8348 10668 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:33:07,008 auth_middleware 8348 10668 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:33:07,023 auth_middleware 8348 10668 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:33:07,025 exception_handler 8348 10668 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000002D8B3F57EC0>
+DEBUG 2026-05-24 07:33:08,978 auth_middleware 27684 28200 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:33:09,033 auth_middleware 27684 21416 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:40:02,680 auth_middleware 27684 4920 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:40:02,908 auth_middleware 27684 38292 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:40:32,554 auth_middleware 25120 25592 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:40:35,660 auth_middleware 25120 25592 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 07:40:36,596 services 25120 25592 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 07:40:36,601 auth_middleware 25120 25592 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 07:40:36,658 auth_middleware 25120 25592 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:40:36,673 auth_middleware 25120 25592 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:40:36,680 exception_handler 25120 25592 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001EFC33D5DF0>
+DEBUG 2026-05-24 07:40:38,843 auth_middleware 25120 25592 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:40:40,545 auth_middleware 25120 25592 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:40:40,613 auth_middleware 25120 25592 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:40:40,618 exception_handler 25120 25592 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001EFC33D7BF0>
+DEBUG 2026-05-24 07:40:43,710 auth_middleware 37152 13712 API Request: GET /api/patient/dashboard/ | User: anonymous
+DEBUG 2026-05-24 07:40:43,714 auth_middleware 37152 18076 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:56:10,779 auth_middleware 34840 28788 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:56:15,352 auth_middleware 34840 28788 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:56:38,695 auth_middleware 12224 22040 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:56:46,836 auth_middleware 29628 30092 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:56:54,184 auth_middleware 12568 30416 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:57:02,162 auth_middleware 9728 2224 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:57:12,912 auth_middleware 27960 18064 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:58:45,599 auth_middleware 8396 37028 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:58:55,308 auth_middleware 8396 37028 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 07:58:58,503 services 8396 37028 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 07:58:58,510 auth_middleware 8396 37028 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 07:58:58,695 auth_middleware 8396 37028 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:58:58,726 auth_middleware 8396 37028 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:58:58,735 exception_handler 8396 37028 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000019455EAEAE0>
+DEBUG 2026-05-24 07:59:02,980 auth_middleware 8396 37028 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 07:59:06,454 auth_middleware 8396 37028 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 07:59:06,508 auth_middleware 8396 37028 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 07:59:06,523 exception_handler 8396 37028 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000019455EE8CB0>
+DEBUG 2026-05-24 07:59:10,571 auth_middleware 31696 18952 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 07:59:40,696 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:01:07,987 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:01:20,618 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:01:28,653 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:01:49,530 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:02:03,128 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:02:12,016 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:02:59,241 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:03:16,079 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:03:27,219 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:03:36,110 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:04:21,106 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:04:29,941 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:04:43,236 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:05:11,373 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:05:50,411 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:05:57,350 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:06:58,345 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:07:02,225 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:07:10,863 auth_middleware 33796 20792 API Request: GET /api/tickets/ | User: anonymous
+WARNING 2026-05-24 08:07:12,033 exception_handler 33796 20792 API Error 401: Authentication credentials were not provided. | View: <support.views.SupportTicketViewSet object at 0x00000207D60DE240>
+DEBUG 2026-05-24 08:07:12,038 auth_middleware 33796 20792 API Request: GET /api/support/tickets/ | User: anonymous
+DEBUG 2026-05-24 08:07:12,615 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:07:18,961 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:07:32,289 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:07:44,847 auth_middleware 18608 18468 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:08:18,211 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:08:28,858 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+INFO 2026-05-24 08:08:54,032 services 15604 24872 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:08:54,032 services 15604 24872 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:09:10,335 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:09:48,408 auth_middleware 22352 18804 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:09:51,675 auth_middleware 22352 18804 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:09:52,948 services 22352 18804 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:09:52,955 auth_middleware 22352 18804 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:09:53,043 auth_middleware 22352 18804 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:09:53,069 auth_middleware 22352 18804 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:09:53,077 exception_handler 22352 18804 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001B0420C2E70>
+DEBUG 2026-05-24 08:09:55,688 auth_middleware 22352 18804 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:09:56,855 auth_middleware 22352 18804 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:09:56,880 auth_middleware 22352 18804 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:09:56,884 exception_handler 22352 18804 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001B0420F53A0>
+DEBUG 2026-05-24 08:09:58,609 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:10:11,908 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:10:16,520 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:10:44,857 auth_middleware 36152 36736 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:10:51,785 auth_middleware 36152 36736 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:10:54,768 services 36152 36736 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:10:54,775 auth_middleware 36152 36736 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:10:54,885 auth_middleware 36152 36736 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:10:54,905 auth_middleware 36152 36736 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:10:54,911 exception_handler 36152 36736 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000186DC1D6AB0>
+DEBUG 2026-05-24 08:10:57,896 auth_middleware 36152 36736 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:11:00,504 auth_middleware 36152 36736 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:11:00,532 auth_middleware 36152 36736 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:11:00,536 exception_handler 36152 36736 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000186DC208DD0>
+INFO 2026-05-24 08:11:05,484 services 36152 36736 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:11:05,484 services 36152 36736 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:11:12,049 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:11:34,005 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:11:43,842 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:11:55,800 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:14:08,708 auth_middleware 10736 32392 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:14:14,986 auth_middleware 10736 32392 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:14:22,914 services 10736 32392 OTP email sent successfully to anandk85260@gmail.com
+DEBUG 2026-05-24 08:14:23,584 auth_middleware 10736 32392 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:14:23,650 auth_middleware 10736 18764 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:19:59,670 auth_middleware 10736 3340 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:19:59,691 auth_middleware 10736 19012 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:20:38,077 auth_middleware 10736 19012 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:20:38,197 auth_middleware 10736 3340 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:21:24,250 auth_middleware 10736 3340 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:21:24,260 auth_middleware 10736 19012 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:21:30,289 auth_middleware 10736 3340 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:21:30,322 auth_middleware 10736 19012 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:21:55,479 auth_middleware 10736 19012 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:21:55,481 auth_middleware 10736 3340 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:22:27,074 auth_middleware 34212 28312 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:22:31,800 auth_middleware 34212 28312 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:22:34,978 services 34212 28312 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:22:34,990 auth_middleware 34212 28312 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:22:35,322 auth_middleware 34212 28312 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:22:35,426 auth_middleware 34212 28312 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:22:35,459 exception_handler 34212 28312 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000014A965DEA80>
+DEBUG 2026-05-24 08:22:43,544 auth_middleware 34212 28312 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:22:46,141 auth_middleware 34212 28312 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:22:46,164 auth_middleware 34212 28312 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:22:46,169 exception_handler 34212 28312 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000014A96614FB0>
+DEBUG 2026-05-24 08:23:02,545 auth_middleware 27012 32060 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:23:02,558 auth_middleware 27012 23808 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:24:01,010 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin-email/ | User: anonymous
+DEBUG 2026-05-24 08:27:07,061 auth_middleware 22816 3024 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:27:16,116 services 22816 3024 OTP email sent successfully to anandk85260@gmail.com
+DEBUG 2026-05-24 08:27:44,311 auth_middleware 22816 3024 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:27:45,603 auth_middleware 22816 3024 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-24 08:27:55,091 auth_middleware 22816 3024 API Request: GET /api/dashboard/super-admin/ | User: anonymous
+DEBUG 2026-05-24 08:27:55,150 auth_middleware 22816 3024 API Request: GET /api/dashboard/super-admin/analytics/ | User: anonymous
+DEBUG 2026-05-24 08:27:55,268 auth_middleware 22816 3024 API Request: GET /api/hospitals/ | User: anonymous
+DEBUG 2026-05-24 08:28:00,360 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:28:04,094 auth_middleware 22816 3024 API Request: GET /api/hospitals/ | User: anonymous
+DEBUG 2026-05-24 08:28:06,696 auth_middleware 22816 3024 API Request: GET /api/doctors/ | User: anonymous
+DEBUG 2026-05-24 08:28:09,070 auth_middleware 22816 3024 API Request: GET /api/patients/ | User: anonymous
+DEBUG 2026-05-24 08:28:11,996 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:28:13,620 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:28:14,881 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:28:16,000 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:28:17,651 auth_middleware 22816 3024 API Request: GET /api/tickets/ | User: anonymous
+DEBUG 2026-05-24 08:28:25,279 auth_middleware 22816 3024 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:36:10,947 auth_middleware 22816 32120 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:37:56,213 auth_middleware 28036 36424 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+INFO 2026-05-24 08:43:13,135 services 38412 17080 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:43:13,136 services 38412 17080 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:43:22,777 auth_middleware 28036 38356 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:43:38,006 auth_middleware 22072 20400 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:43:39,754 auth_middleware 22072 20400 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:43:40,328 services 22072 20400 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:43:40,332 auth_middleware 22072 20400 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:43:40,374 auth_middleware 22072 20400 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:43:40,387 auth_middleware 22072 20400 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:43:40,392 exception_handler 22072 20400 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001FF11D4C8F0>
+DEBUG 2026-05-24 08:43:41,588 auth_middleware 22072 20400 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:43:42,192 auth_middleware 22072 20400 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:43:42,202 auth_middleware 22072 20400 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:43:42,203 exception_handler 22072 20400 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001FF11D4FB90>
+DEBUG 2026-05-24 08:43:43,332 auth_middleware 28036 38356 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:43:53,523 auth_middleware 28036 38356 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:44:16,407 auth_middleware 28084 4392 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:44:18,211 auth_middleware 28084 4392 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:44:18,753 services 28084 4392 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:44:18,755 auth_middleware 28084 4392 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:44:18,793 auth_middleware 28084 4392 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:44:18,803 auth_middleware 28084 4392 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:44:18,807 exception_handler 28084 4392 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000023978F22A20>
+DEBUG 2026-05-24 08:44:19,946 auth_middleware 28084 4392 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:44:20,594 auth_middleware 28084 4392 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:44:20,603 auth_middleware 28084 4392 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:44:20,604 exception_handler 28084 4392 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x0000023978F59970>
+INFO 2026-05-24 08:44:21,725 services 28084 4392 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:44:21,725 services 28084 4392 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:44:29,911 auth_middleware 28036 38356 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:45:19,374 auth_middleware 24788 2888 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:45:21,862 auth_middleware 16164 28136 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:45:25,464 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:45:41,066 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:45:53,705 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:45:58,434 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:46:10,090 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:46:15,310 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:46:25,821 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:46:30,114 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:47:13,310 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:47:18,063 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:47:25,297 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:47:35,649 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:47:40,539 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:47:56,803 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:48:12,527 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:48:24,783 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:48:34,533 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:48:45,023 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:48:54,546 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:48:58,900 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:49:11,938 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:49:20,053 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:49:21,570 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:49:29,470 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:49:48,060 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:51:55,130 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:52:01,581 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:52:30,913 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:52:37,679 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:52:46,834 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:53:06,441 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:53:31,092 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+INFO 2026-05-24 08:53:53,494 services 18768 17064 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:53:53,494 services 18768 17064 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:54:01,661 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:54:19,193 auth_middleware 33024 26428 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:54:20,906 auth_middleware 33024 26428 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:54:21,443 services 33024 26428 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:54:21,446 auth_middleware 33024 26428 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:54:21,483 auth_middleware 33024 26428 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:54:21,491 auth_middleware 33024 26428 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:54:21,495 exception_handler 33024 26428 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001F155896CF0>
+DEBUG 2026-05-24 08:54:22,631 auth_middleware 33024 26428 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:54:23,367 auth_middleware 33024 26428 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:54:23,379 auth_middleware 33024 26428 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:54:23,382 exception_handler 33024 26428 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001F1558CA510>
+INFO 2026-05-24 08:54:24,769 services 33024 26428 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:54:24,769 services 33024 26428 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:54:33,140 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:55:10,035 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:56:57,075 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:57:35,113 auth_middleware 15576 20676 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:57:36,455 auth_middleware 15576 20676 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 08:57:36,931 services 15576 20676 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 08:57:36,934 auth_middleware 15576 20676 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 08:57:36,964 auth_middleware 15576 20676 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:57:36,971 auth_middleware 15576 20676 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:57:36,973 exception_handler 15576 20676 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001A768A14470>
+DEBUG 2026-05-24 08:57:37,836 auth_middleware 15576 20676 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 08:57:38,276 auth_middleware 15576 20676 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 08:57:38,285 auth_middleware 15576 20676 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 08:57:38,287 exception_handler 15576 20676 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001A768A17410>
+INFO 2026-05-24 08:57:39,224 services 15576 20676 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 08:57:39,224 services 15576 20676 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 08:57:46,246 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 08:59:37,102 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:01:49,800 auth_middleware 9388 28264 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 09:01:51,135 auth_middleware 9388 28264 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 09:01:51,597 services 9388 28264 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 09:01:51,599 auth_middleware 9388 28264 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 09:01:51,629 auth_middleware 9388 28264 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 09:01:51,636 auth_middleware 9388 28264 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 09:01:51,639 exception_handler 9388 28264 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001F161B85040>
+DEBUG 2026-05-24 09:01:52,523 auth_middleware 9388 28264 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 09:01:52,984 auth_middleware 9388 28264 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 09:01:52,991 auth_middleware 9388 28264 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 09:01:52,993 exception_handler 9388 28264 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x000001F161BAC3E0>
+INFO 2026-05-24 09:01:53,945 services 9388 28264 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 09:01:53,945 services 9388 28264 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 09:02:03,011 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:02:03,855 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:02:50,350 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:02:50,577 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:02:56,986 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:04:31,956 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:04:41,166 auth_middleware 16164 16184 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:10:04,630 auth_middleware 6964 13868 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 09:10:06,322 auth_middleware 6964 13868 API Request: POST /api/auth/login/ | User: anonymous
+INFO 2026-05-24 09:10:06,938 services 6964 13868 OTP email sent successfully to sa@example.com
+DEBUG 2026-05-24 09:10:06,940 auth_middleware 6964 13868 API Request: POST /api/auth/verify-otp/ | User: anonymous
+DEBUG 2026-05-24 09:10:06,987 auth_middleware 6964 13868 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 09:10:06,999 auth_middleware 6964 13868 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 09:10:07,003 exception_handler 6964 13868 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000298D81F0590>
+DEBUG 2026-05-24 09:10:08,206 auth_middleware 6964 13868 API Request: POST /api/auth/login/ | User: anonymous
+DEBUG 2026-05-24 09:10:08,775 auth_middleware 6964 13868 API Request: POST /api/auth/token/refresh/ | User: anonymous
+DEBUG 2026-05-24 09:10:08,785 auth_middleware 6964 13868 API Request: POST /api/auth/token/refresh/ | User: anonymous
+WARNING 2026-05-24 09:10:08,787 exception_handler 6964 13868 API Error 401: Token is blacklisted | View: <rest_framework_simplejwt.views.TokenRefreshView object at 0x00000298D8210500>
+INFO 2026-05-24 09:10:10,026 services 6964 13868 Auto-generated Paid OPD Consultation Invoice #1 for Appointment #1
+INFO 2026-05-24 09:10:10,026 services 6964 13868 Appointment #1 booked: John Doe for General Checkup
+DEBUG 2026-05-24 09:10:18,495 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:10:44,455 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:13:05,113 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:13:06,748 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:14:09,967 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:14:19,181 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous
+DEBUG 2026-05-24 09:14:24,772 auth_middleware 16164 21632 API Request: GET /api/hospitals/ | User: anonymous
+DEBUG 2026-05-24 09:14:25,229 auth_middleware 16164 21632 API Request: GET /api/hospitals/ | User: anonymous
+DEBUG 2026-05-24 09:14:26,794 auth_middleware 16164 21632 API Request: GET /api/auth/super-admin/staff/ | User: anonymous

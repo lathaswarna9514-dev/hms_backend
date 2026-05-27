@@ -10,6 +10,7 @@ from django.db import transaction
 from utils.permissions import IsAdminUser, IsPatientUser
 from .models import Patient
 from .serializers import PatientListSerializer, PatientDetailSerializer, PatientUpdateSerializer
+from utils.pagination import paginate_queryset_response
 
 
 class PatientListView(APIView):
@@ -34,8 +35,7 @@ class PatientListView(APIView):
             patients = patients.filter(
                 Q(name__icontains=search) | Q(email__icontains=search) | Q(nic__icontains=search)
             )
-        serializer = PatientListSerializer(patients, many=True)
-        return Response({'success': True, 'count': patients.count(), 'data': serializer.data})
+        return paginate_queryset_response(patients, request, PatientListSerializer)
 
 
 class PatientDetailView(APIView):

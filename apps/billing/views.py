@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from utils.permissions import IsAdminUser, IsPatientUser
+from utils.pagination import paginate_queryset_response
 
 from .models import Invoice, InvoiceItem
 from .serializers import InvoiceSerializer, InvoiceItemSerializer
@@ -46,8 +47,37 @@ class InvoiceListView(APIView):
         if billing_type:
             qs = qs.filter(billing_type=billing_type)
 
+        # Calculate summary statistics before paginating
+        from django.db.models import Sum
+        outstanding = qs.filter(status='pending').aggregate(Sum('total_amount'))['total_amount__sum'] or 0.00
+        settled = qs.filter(status='paid').aggregate(Sum('total_amount'))['total_amount__sum'] or 0.00
+        pending_count = qs.filter(status='pending').count()
+        paid_count = qs.filter(status='paid').count()
+
+        from utils.pagination import StandardResultsSetPagination
+        paginator = StandardResultsSetPagination()
+        page = paginator.paginate_queryset(qs, request)
+        if page is not None:
+            serializer = InvoiceSerializer(page, many=True)
+            response = paginator.get_paginated_response(serializer.data)
+            response.data['outstanding_amount'] = float(outstanding)
+            response.data['settled_amount'] = float(settled)
+            response.data['pending_count'] = pending_count
+            response.data['paid_count'] = paid_count
+            # Re-wrap spread parameters in DRF response data dict
+            response.data['success'] = True
+            return response
+
         serializer = InvoiceSerializer(qs, many=True)
-        return Response({'success': True, 'count': qs.count(), 'data': serializer.data})
+        return Response({
+            'success': True,
+            'count': qs.count(),
+            'outstanding_amount': float(outstanding),
+            'settled_amount': float(settled),
+            'pending_count': pending_count,
+            'paid_count': paid_count,
+            'results': serializer.data
+        })
 
     def post(self, request):
         user = request.user
@@ -279,5 +309,4 @@ class MyInvoicesView(APIView):
             return Response({'success': False, 'message': 'Patient profile not found.'}, status=404)
 
         invoices = Invoice.objects.filter(patient=patient).prefetch_related('items').order_by('-created_at')
-        serializer = InvoiceSerializer(invoices, many=True)
-        return Response({'success': True, 'count': invoices.count(), 'data': serializer.data})
+        return paginate_queryset_response(invoices, request, InvoiceSerializer)
