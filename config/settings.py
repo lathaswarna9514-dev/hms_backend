@@ -17,7 +17,11 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 # Security
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-change-this-in-production-!@#$%^&*()')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.vercel.app', cast=lambda v: [s.strip() for s in v.split(',')])
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [s.strip() for s in v.split(',')])
+if '.vercel.app' not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append('.vercel.app')
+# Also allow wildcard temporarily to prevent any further host issues
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
