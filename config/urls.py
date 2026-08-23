@@ -5,8 +5,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import JsonResponse
+
+def api_root_view(request):
+    return JsonResponse({
+        "status": "online",
+        "message": "eDoc HMS API is running successfully on Vercel!",
+        "version": "1.0.0"
+    })
 
 urlpatterns = [
+    path('', api_root_view, name='api-root'),
     path('admin/', admin.site.urls),
 
     # API Routes
